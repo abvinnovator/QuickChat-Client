@@ -226,7 +226,7 @@ const ChatApp: React.FC = () => {
         <div className="max-w-4xl mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <MessageCircle className="w-8 h-8 text-indigo-600" />
-            <h1 className="text-xl font-bold text-gray-800">RandomChat</h1>
+            <h1 className="text-xl font-bold text-gray-800">QuickChat</h1>
           </div>
           
           <div className="flex items-center space-x-4">
@@ -250,7 +250,7 @@ const ChatApp: React.FC = () => {
           {connection.status === 'disconnected' && (
             <div className="text-center py-12">
               <User className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-              <h2 className="text-xl font-semibold text-gray-700 mb-2">Welcome to RandomChat</h2>
+              <h2 className="text-xl font-semibold text-gray-700 mb-2">Welcome to QuickChat</h2>
               <p className="text-gray-500 mb-6">Connect with strangers from around the world</p>
               <button
                 onClick={handleConnect}
