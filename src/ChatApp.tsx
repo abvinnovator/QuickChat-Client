@@ -28,7 +28,11 @@ const ChatApp: React.FC = () => {
 
   useEffect(() => {
     // Initialize socket connection
-    socketRef.current = io('http://localhost:3001', {
+    const serverUrl = process.env.NODE_ENV === 'production' 
+      ? window.location.origin  // Use same origin in production
+      : 'http://localhost:3001'; // Development server
+      
+    socketRef.current = io(serverUrl, {
       transports: ['websocket', 'polling']
     });
     
